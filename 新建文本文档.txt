@@ -1,0 +1,19 @@
+Open Browser    http://www.baidu.com    gc
+    Comment    Maximize Browser Window
+    sleep    2
+    Input Text    id=kw    python
+
+jd
+    open browser    http://www.jd.com    gc    jd
+    sleep    2
+    Maximize Browser Window
+    sleep    3
+    Click element    class=navitems-lk
+    ${title}    get title
+    log    ${title}
+    ${headers}    Get Window Handles    #获取所有窗口的句柄
+    log    ${headers}
+    Select Window    ${headers[1]}
+    ${title1}    get title
+    log    ${title1}
+    sleep    2
